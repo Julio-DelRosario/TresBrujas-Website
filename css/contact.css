@@ -17,7 +17,7 @@ label{
     font-weight: bold;
     color: #f2f4f3;
 }
-input, textarea, button{
+.contact-form{
     padding: 10px;
     margin-top: 5px;
     color: #f2f4f3;
