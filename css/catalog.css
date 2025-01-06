@@ -50,6 +50,10 @@ header p {
 }
 
 .product {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     background-color: #130E0E;
     border: 1px solid #555;
     border-radius: 10px;
