@@ -29,7 +29,6 @@ a{
     display: flex;
     align-items: center;
     padding: 0 10%;
-
 }
 .nav-brand-logo{
     align-items: center;
@@ -46,7 +45,7 @@ a{
     display: flex;
     justify-content: center;
     flex-grow: 1;
-    padding-left:30px;
+    margin-left: 4%;
 }
 .nav-links{
     display: flex;
