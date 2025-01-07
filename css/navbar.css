@@ -78,6 +78,9 @@ a:is(:link, :active, :visited).active{
 .nav-cart{
     padding: 6px 10px;
 }
+#cart-icon:hover{
+    content: url("/images/shopping-cart-hover.svg");
+}
 .search-bar{
     display: flex;
     align-items: center;
