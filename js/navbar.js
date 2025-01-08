@@ -4,3 +4,5 @@ const navLinks = document.querySelectorAll('.nav-links a').forEach(link => {
         link.classList.add('active');
     }
 });
+
+console.log(activePage);

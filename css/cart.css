@@ -4,3 +4,6 @@ body{
     color: #f2f4f3;
     background-color: #130E0E;
 }
+.cart{
+    position: absolute;
+}

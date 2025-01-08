@@ -7,8 +7,7 @@ body{
 header{
     color: #f2f4f3;
     text-align: center;
-    margin: 150px 300px 0;
-    text-align: center;
+    margin: 50px 300px;
 }
 .text {
     flex: 1; 
