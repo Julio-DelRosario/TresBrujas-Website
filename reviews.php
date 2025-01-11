@@ -13,7 +13,7 @@
     <nav>
         <div class="nav-brand">
             <img class="nav-brand-logo" src="images/Logo.webp" alt="tres_brujas">
-            <a class="nav-brand-name" href="">TRES BRUJAS™</a>
+            <a class="nav-brand-name" href="index.php">TRES BRUJAS™</a>
         </div>
 
         <div class="nav-info">
