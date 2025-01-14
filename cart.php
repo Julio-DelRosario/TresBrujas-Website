@@ -17,34 +17,6 @@
         $product_image = $_POST['productImage'];
     }
     $result = $conn->query("SELECT productName, productPrice, productImage FROM products");
-
-    if ($result->num_rows>0){
-        while($row = $result->fetch_assoc()){
-            echo 
-            "<tr>
-                <td class=product><img class=product-image src=data:image/webp;base64,".$row["productImage"]." alt=".$row["productName"]."></td>
-                <td><p>" .$row["productName"]."</p></td>
-            </tr>";
-        }
-        // <td class="product">
-        //                     <img class="product-image" src="images/products/Blue_Sage.webp" alt="Blue_sage">
-        //                 </td>
-        //                 <td>
-        //                     <p>Blue Sage</p>
-        //                     <p>$100.00</p>
-        //                 </td>
-        //                 <td class="quantity">
-        //                     <div class="btn-container">
-        //                         <button class="quantity-btn" id="decrement">-</button>
-        //                         <span>1</span>
-        //                         <button class="quantity-btn" id="increment">+</button>
-        //                     </div>
-        //                 </td>
-        //                 <td class="total">$<span>100.00</span></td>
-    } else {
-        echo "<tr><td colspan='3'>No Records found</td></tr>";
-    }
-    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -98,23 +70,27 @@
                         <th class="total">Total</th>
                     </tr>
 
-                    <tr>
-                        <td class="product">
-                            <img class="product-image" src="images/products/Blue_Sage.webp" alt="Blue_sage">
-                        </td>
-                        <td>
-                            <p>Blue Sage</p>
-                            <p>$100.00</p>
-                        </td>
-                        <td class="quantity">
-                            <div class="btn-container">
-                                <button class="quantity-btn" id="decrement">-</button>
-                                <span>1</span>
-                                <button class="quantity-btn" id="increment">+</button>
-                            </div>
-                        </td>
-                        <td class="total">$<span>100.00</span></td>
-                    </tr>
+                    <?php
+                        while($row = $result->fetch_assoc()){
+                            $imageData = base64_encode($row["productImage"]);
+                            echo 
+                            "<tr>
+                                <td class='product'><img class='product-image' src=data:image.webp;base64,".$imageData." alt=".$row["productName"]."></td>
+                                <td>
+                                    <p>" .$row["productName"]."</p>
+                                    <p>$".$row["productPrice"]."</p>
+                                </td>
+                                <td class='quantity'>
+                                    <div class='btn-container'>
+                                            <button class='quantity-btn' id='decrement'>-</button>
+                                            <span>1</span>
+                                        <button class='quantity-btn' id='increment'>+</button>
+                                    </div>
+                                </td>
+                                <td class='total'>$<span>".$row["productPrice"].".00</span></td>
+                            </tr>";
+                        }
+                    ?>
                 </table>
             </div>
         </div>
@@ -136,3 +112,23 @@
         
 </body>
 </html>
+
+
+<!-- Sample product 
+<tr>
+    <td class="product">
+        <img class="product-image" src="images/products/Blue_Sage.webp" alt="Blue_sage">
+    </td>
+    <td>
+        <p>Blue Sage</p>
+        <p>$100.00</p>
+    </td>
+    <td class="quantity">
+        <div class="btn-container">
+            <button class="quantity-btn" id="decrement">-</button>
+            <span>1</span>
+            <button class="quantity-btn" id="increment">+</button>
+        </div>
+    </td>
+    <td class="total">$<span>100.00</span></td>
+</tr> -->
