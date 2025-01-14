@@ -97,6 +97,6 @@
         </div>
     </section>
 
-    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
 </body>
 </html>
