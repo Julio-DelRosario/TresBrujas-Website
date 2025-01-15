@@ -1,14 +1,19 @@
-var cart = [];
-var products = {
-    white_sage: { id: 1, name: "White Sage with Lavender and Palo Santo", price: 500 },
-    blue_sage: { id: 2, name: "Blue Sage", price: 300 },
-    cedar: { id: 3, name: "Cedar", price: 300 },
-    dragons_blood: { id: 4, name: "Dragon's Blood", price: 400 },
-    mugwort: { id: 5, name: "Mugwort", price: 400 },
-    yerba_santa: { id: 6, name: "Yerba Santa", price: 400 }
-};
+const cartKey = 'shoppingCart';
+const cart = JSON.parse(localStorage.getItem(cartKey)) || [];
 
-function addProduct(item){
-    cart.push(item);
-    console.log(cart);
+const products = document.getElementById('products');
+const cartItems = document.getElementById('cart-items');
+
+function renderCart() {
+  cartItems.innerHTML = '';
+  for (const product of data) {
+    const productDiv = document.createElement('div');
+    productDiv.className = 'product';
+    productDiv.innerHTML = `
+      <h3>${product.name}</h3>
+      <p>${product.price}</p>
+      <button onclick="addToCart(${product.id})">Add to Cart</button>
+    `;
+    products.appendChild(productDiv);
+  }
 }

@@ -1,23 +1,3 @@
-<?php
-    $host = "localhost";
-    $dbname = "tresbrujas";
-    $username = "root";
-    $password = "";
-
-    $conn = new mysqli($host, $username, $password, $dbname);
-
-    //check connection
-    if ($conn->connect_error){
-        die("Connection failed:".$conn -> connect_error);
-    }
-
-    if ($_SERVER["REQUEST_METHOD"] == "POST"){
-        $product_name = $_POST['productName'];
-        $product_price = $_POST['productPrice'];
-        $product_image = $_POST['productImage'];
-    }
-    $result = $conn->query("SELECT productName, productPrice, productImage FROM products");
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -109,6 +89,8 @@
             </div>
         </div>
     </div>
+
+    <script src="js/cart.js"></script>
         
 </body>
 </html>

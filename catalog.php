@@ -45,58 +45,61 @@
 
     <section id="catalog">
         <h2>Our Products</h2>
-        <div class="product-grid">
-            <div class="product">
-                <button class="view-product" id="view-button" onclick="viewProduct()">
-                    <img src="images/products/Whitesage_LV_PS.webp" alt="White Sage with Lavender and Palo Santo">
-                    <h3>White Sage with Lavender and Palo Santo</h3>
-                    <p>$500</p>
-                </button>
-                <button class="add-to-cart" onclick="addProduct(white_sage)">Add to Cart</button>
-            </div>
-            <div class="product">
-                <button class="view-product" id="view-button" onclick="viewProduct()">
-                    <img src="images/products/Blue_Sage.webp" alt="Blue Sage">
-                    <h3>Blue Sage</h3>
-                    <p>$300</p>
-                </button>
-                <button class="add-to-cart" onclick="addProduct(blue_sage)">Add to Cart</button>
-            </div>
-            <div class="product">
-                <button class="view-product" id="view-button" onclick="viewProduct()">
-                    <img src="images/products/Cedar.webp" alt="Cedar">
-                    <h3>Cedar</h3>
-                    <p>$300</p>
-                </button>
-                <button class="add-to-cart" onclick="addProduct(cedar)">Add to Cart</button>
-            </div>
-            <div class="product">
-                <button class="view-product" id="view-button" onclick="viewProduct()">
-                    <img src="images/products/Dragons_Blood.webp" alt="Dragon's Blood Sage">
-                    <h3>Dragon's Blood Sage</h3>
-                    <p>$400</p>
-                </button>
-                <button class="add-to-cart" onclick="addProduct(dragons_blood)">Add to Cart</button>
-            </div>
-            <div class="product">
-                <button class="view-product" id="view-button" onclick="viewProduct()">
-                    <img src="images/products/Mugwort.webp" alt="Mugwort">
-                    <h3>Mugwort</h3>
-                    <p>$400</p>
-                </button>
-                <button class="add-to-cart" onclick="addProduct(mugwort)">Add to Cart</button>
-            </div>
-            <div class="product">
-                <button class="view-product" id="view-button" onclick="viewProduct()">
-                    <img src="images/products/Yerba_Santa.webp" alt="Yerba Santa">
-                    <h3>Yerba Santa</h3>
-                    <p>$400</p>
-                </button>
-                <button class="add-to-cart" onclick="addProduct(yerba_santa)">Add to Cart</button>
-            </div>
+        <div class="product-grid" id="product-grid">
+            
         </div>
     </section>
 
-    <script src="js/cart.js"></script>
+    <script src="js/products.js"></script>
 </body>
 </html>
+
+<!-- The products is generated dynamically using JavaScript
+<div class="product" id="products">
+    <button class="view-product" id="view-button" onclick="viewProduct()">
+        <img src="images/products/Whitesage_LV_PS.webp" alt="White Sage with Lavender and Palo Santo">
+        <h3>White Sage with Lavender and Palo Santo</h3>
+        <p>$500</p>
+    </button>
+    <button class="add-to-cart" onclick="addProduct(white_sage)">Add to Cart</button>
+</div>
+<div class="product">
+    <button class="view-product" id="view-button" onclick="viewProduct()">
+        <img src="images/products/Blue_Sage.webp" alt="Blue Sage">
+        <h3>Blue Sage</h3>
+        <p>$300</p>
+    </button>
+    <button class="add-to-cart" onclick="addProduct(blue_sage)">Add to Cart</button>
+</div>
+<div class="product">
+    <button class="view-product" id="view-button" onclick="viewProduct()">
+        <img src="images/products/Cedar.webp" alt="Cedar">
+        <h3>Cedar</h3>
+        <p>$300</p>
+    </button>
+    <button class="add-to-cart" onclick="addProduct(cedar)">Add to Cart</button>
+</div>
+<div class="product">
+    <button class="view-product" id="view-button" onclick="viewProduct()">
+        <img src="images/products/Dragons_Blood.webp" alt="Dragon's Blood Sage">
+        <h3>Dragon's Blood Sage</h3>
+        <p>$400</p>
+    </button>
+    <button class="add-to-cart" onclick="addProduct(dragons_blood)">Add to Cart</button>
+</div>
+<div class="product">
+    <button class="view-product" id="view-button" onclick="viewProduct()">
+        <img src="images/products/Mugwort.webp" alt="Mugwort">
+        <h3>Mugwort</h3>
+        <p>$400</p>
+    </button>
+    <button class="add-to-cart" onclick="addProduct(mugwort)">Add to Cart</button>
+</div>
+<div class="product">
+    <button class="view-product" id="view-button" onclick="viewProduct()">
+        <img src="images/products/Yerba_Santa.webp" alt="Yerba Santa">
+        <h3>Yerba Santa</h3>
+        <p>$400</p>
+    </button>
+    <button class="add-to-cart" onclick="addProduct(yerba_santa)">Add to Cart</button>
+</div> -->
